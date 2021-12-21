@@ -230,9 +230,19 @@ app.get("/list:customListName",function(req,res){
  res.redirect("/login");
  });
 
-app.listen(4000, function() {
+ let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 4000;
+}
+
+app.listen(port, function() {
   console.log("Server has started Successfully");
 });
+
+
+// app.listen(4000, function() {
+//   console.log("Server has started Successfully");
+// });
 
 // app.get("/about", function(req, res){
 //   res.render("about");
