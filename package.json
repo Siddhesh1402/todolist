@@ -9,7 +9,7 @@
   "author": "sharad",
   "license": "ISC",
   "engines": {
-    "node": "14.17.3"
+    "node": "14.17.6"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

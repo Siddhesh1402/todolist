@@ -232,7 +232,7 @@ app.get("/list:customListName",function(req,res){
 
  let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 4000;
+  port = 4g000;
 }
 
 app.listen(port, function() {
