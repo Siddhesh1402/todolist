@@ -1,0 +1,38 @@
+<%- include("header") -%>
+
+     <div class ="box">
+       <div class="frontcontainer">
+         <h1 class="frontH1">Login</h1>
+            <form action="/login" method="post">
+              <input class="frontInput"
+                type="username"
+                name="username"
+                placeholder="Username"
+                value="<%= user %>"
+                required
+               />
+               <div id='status' class='error' style="margin-right: 135px">
+                <%= erroruser %>
+               </div>
+              <input class="frontInput"
+                type="Password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <div id='status' class='error' style="margin-right: 135px;">
+               <%= errorpass %>
+              </div>
+              <button type="submit" name="login" class="frontButton">Submit</button>
+            </form>
+          </div>
+     </div>
+
+     <script>
+       if($('div#status').text()!="")
+       {
+         alert($('div#status').text());
+       }
+     </script>
+
+  <%- include("footer") -%>

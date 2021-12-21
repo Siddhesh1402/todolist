@@ -1,0 +1,33 @@
+<%- include("header") -%>
+
+     <div class ="box">
+       <div class="frontcontainer">
+         <h1 class="frontH1">Register</h1>
+            <form action="/register" method="post">
+              <input class="frontInput"
+                type="username"
+                name="username"
+                placeholder="Username"
+                value="<%= username %>"
+                required
+              />
+              <div id='status' class='error' style="margin-right: 103px;">
+               <%= userexist %>
+              </div>
+              <input class="frontInput"
+                type="Password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <div id='status'
+              class='error'
+              style="margin-right: 0;">
+               <%= passlen %>
+              </div>
+              <button type="submit" name="login" class="frontButton"><span>Submit</span></button>
+            </form>
+          </div>
+     </div>
+
+  <%- include("footer") -%>
